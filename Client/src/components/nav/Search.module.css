@@ -1,0 +1,72 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+.input{
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  padding: 5px;
+}
+
+.boton{
+    background-color: black;
+    color:rgb(108, 228, 39);
+    border-radius: 4px;
+    box-shadow: 0 0 10px 5px;
+    margin: 10px;
+    /* height: 30px; */
+    font-weight: bold;
+    padding: 5px 10px;
+    
+}
+
+.boton:hover{
+    background-color: rgb(108, 228, 39);
+    color: black;
+}
+
+.search {
+   float:right;
+   margin: 15px;
+   
+}
+
+.contenedor{
+    background-color: rgba(0, 0, 0, 0.661);
+    height: 80px;
+    width: 100%;
+    
+}
+
+/* TODO LO DE NAVEGADOR SUPLENTE */
+
+.contenedor_links{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(0, 0, 0, 0.661);
+    height: 80px;
+    width: 100%;
+}
+.contenedor_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.links{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.links:hover {
+    color:rgb(226, 43, 205);
+}

@@ -1,0 +1,25 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.636);
+    height: 400px;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top:40%;
+}
+
+.parrafos{
+    font-size: 2rem;
+    color:white;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 2rem;
+}

@@ -1,0 +1,21 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.189);
+    width: 50%;
+    margin-left: 24.5rem;
+}
+.titulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+
+}
+
+.link{
+    color: black;
+    
+}
