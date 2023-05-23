@@ -47,10 +47,10 @@
 }
 
 .name{
-    color:rgb(67, 130, 56);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(73, 56, 130);
+    font-family:"IBM Plex Mono", monospace;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.789);
+    background-color: rgba(232, 232, 184, 0.789);
     margin-top: 20px;
     border-radius: 10px;
     padding: 10px 5px;
@@ -64,7 +64,7 @@
 }
 
 .h2{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"IBM Plex Mono", monospace;
     font-weight: bold;
     font-size: 20px;
     color: rgb(35, 49, 13);

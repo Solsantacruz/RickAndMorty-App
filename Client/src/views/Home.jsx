@@ -5,13 +5,12 @@ import Nav from '../components/nav/Nav'
 
 
 const Home = () => {
-
     const [characters, setCharacters] = useState([]);
 //Conecta a la api
-   const onSearch = (character) => {
-    fetch(`http://localhost:3001/rickandmorty/character/${character}`)
-    .then(res=>res.json())
-    .then((data)=>{
+
+   const onSearch = async(character) => {
+    try {
+      const data = await(await fetch(`http://localhost:3001/rickandmorty/character/${character}`)).json();
       if (data.id){
         if (characters.some(char => char.id === data.id)) {
           window.alert('El ID ya está en la lista');
@@ -21,8 +20,30 @@ const Home = () => {
     } else{
       window.alert('No hay personajes con ese ID');
       }
-    });
-   };
+    } catch (error) {
+      alert(error.message);
+    }
+    
+    };
+   
+  
+
+
+  //  const onSearch = async(character) => {
+    // fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+    // .then(res=>res.json())
+    // .then((data)=>{
+    //   if (data.id){
+    //     if (characters.some(char => char.id === data.id)) {
+    //       window.alert('El ID ya está en la lista');
+    //     }else{
+    //     setCharacters([...characters, data]);
+    //   }
+    // } else{
+    //   window.alert('No hay personajes con ese ID');
+    //   }
+    // });
+  //  };
   
 
 // Funcion para borrar la tarjeta

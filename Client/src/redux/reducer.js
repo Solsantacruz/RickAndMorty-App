@@ -3,20 +3,23 @@ import {ADD_FAVORITES, REMOVE_FAVORITES, FILTER, ORDER, RESET} from "./actions.j
 const initialState = {
    myFavorites: [],
    allCharacters: [], // copia de favoritos
-}
+};
 
-const rootReducer = (state= initialState, action) => {
+const rootReducer = (state = initialState, action) => {
 
     switch(action.type){
         case ADD_FAVORITES:
-            const add = [...state.myFavorites, action.payload]
+            // const add = [...state.myFavorites, action.payload]
+            // return {
+            //     ...state,
+            //     myFavorites: [...add], 
+            //     allCharacters: [...add]
+            //   }
             return {
                 ...state,
-                myFavorites: [...add], 
-                allCharacters: [...add]
-              }
-            // return { ...state, myFavorites: action.payload, 
-            //         allCharacters: action.payload };
+                myFavorites: action.payload,
+                allCharacters: action.payload,
+              };
               
         case REMOVE_FAVORITES:
             return { ...state, myFavorites: action.payload };
@@ -29,11 +32,6 @@ const rootReducer = (state= initialState, action) => {
             //       myFavorites: [...filteredFavorites],
             //       allCharacters: [...filteredFavorites]
             //  }
-            // return {
-            //     ...state,
-            //     myFavorites: action.payload,
-            //     allCharacters: action.payload
-            //   };
             
         case FILTER:
             return{

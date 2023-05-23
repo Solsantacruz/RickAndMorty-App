@@ -14,15 +14,19 @@ export const RESET = "RESET";
     //     payload: character
     //   }
     const endpoint = 'http://localhost:3001/rickandmorty/fav';
-   return (dispatch) => {
-      axios.post(endpoint, character).then(({ data }) => {
+   return async (dispatch) => {
+    try {
+      const response = (await axios.post(endpoint, character)).data;
          return dispatch({
             type: 'ADD_FAVORITES',
-            payload: data,
+            payload: response,
          });
-      });
+    } catch (error) {
+      throw Error(error.message)
+    }
+      };
    };
-}
+
 
 export const removeFavorites = (id) =>{
     // return {
@@ -30,15 +34,20 @@ export const removeFavorites = (id) =>{
     //   payload:  {id}
     // }
     const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`;
-   return (dispatch) => {
-      axios.delete(endpoint).then(({data}) => {
+   return async (dispatch) => {
+    try {
+      const response = (await axios.delete(endpoint)).data;
          return dispatch({
             type: 'REMOVE_FAVORITES',
-            payload: data,
+            payload: response,
       });
-      });
+    } catch (error) {
+      throw error(error.message);
+    }
+      
+      };
    };
-  }
+  
 
 export const filterCards = (gender) => {
   return {
