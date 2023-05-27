@@ -1,11 +1,12 @@
 import SearchBar from "../Search/SearchBar";
 // import style from "./Search.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import image from "../imgForm/rym-logo.png";
 import style from "./Nav.module.css"
 
 
 const Nav = (props) => {
+    const location = useLocation();
 
     return (
         <nav className={style.contenedor}>
@@ -17,10 +18,12 @@ const Nav = (props) => {
             <Link to="/about" className={style.links}>About</Link>
             <Link to="/favoritos" className={style.links}>Favoritos</Link>
             </div>
-            <SearchBar  
+            {location.pathname === '/home' && <SearchBar  
                onSearch={props.onSearch}
                getRandomCharacter={props.getRandomCharacter}
-               />   
+               />}
+
+            {location.pathname !== '/home' && <Link/>}
         </nav>
     )
 }

@@ -25,8 +25,7 @@ const Detail = (props) => {
     return setCharacter({});
   }, [id]);
     return(    
-        <div >
-            <NavSuplente />
+        <div>
             <h2 className={style.titulo}>Esta es la ficha del ID: {id} </h2>
             <div className={style.contenedor}>
             <Link to="/home" className={style.link}>
@@ -35,12 +34,12 @@ const Detail = (props) => {
           <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
              </svg>
           </Link>
-            <h1>{character.name}</h1>
+            <h1 className={style.h1}>{character.name}</h1>
             <img src={character.image} alt="nombre" />
-            <h1>Status: {character.status}</h1>
-            <h1>Species: {character.species}</h1>
-            <h1>Gender: {character.gender}</h1>
-            <h1>Origin: {character.origin?.name}</h1>
+            <h1 className={style.h1}>Status: {character.status}</h1>
+            <h1 className={style.h1}>Species: {character.species}</h1>
+            <h1 className={style.h1}>Gender: {character.gender}</h1>
+            <h1 className={style.h1}>Origin: {character.origin?.name}</h1>
                 
              </div>
         </div> 

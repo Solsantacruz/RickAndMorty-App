@@ -42,7 +42,7 @@ export const removeFavorites = (id) =>{
             payload: response,
       });
     } catch (error) {
-      throw error(error.message);
+      console.log(error.message);
     }
       
       };

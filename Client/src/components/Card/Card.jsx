@@ -34,12 +34,12 @@ import { addFavorites, removeFavorites } from '../../redux/actions';
 
 
    return (
-      <div className={style.card}>
+      <div className={style.card} >
          <button onClick={onClose} className={style.cerrar}>X</button>
          {isFav ? (
-         <button onClick={handleFavorite}>❤️</button>
+         <button onClick={handleFavorite} className={style.corazon}>❤️</button>
          ):(
-         <button onClick={handleFavorite}>🤍</button>
+         <button onClick={handleFavorite} className={style.corazon}>🤍</button>
          )}
          <Link to={`/detail/${props.id}`} className={style.link}>
          <h2 className={style.name}>{character.name} </h2>

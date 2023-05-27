@@ -1,5 +1,4 @@
  import AboutText from "../components/AboutText";
- import NavSuplente from "../components/nav/NavSuplente";
 //  import style from "./About.module.css";
  
  
@@ -7,13 +6,7 @@
 
     return (
         <>
-        <div>
-        <NavSuplente />
-        </div>
-        
-        
-
-
+      
       <div >
         <AboutText/>
       </div> 

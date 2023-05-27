@@ -1,0 +1,19 @@
+.boton {
+    background-color: black;
+    color:rgb(246, 152, 195);
+    border-radius: 4px;
+    box-shadow: 0 0 10px 5px rgb(108, 39, 228);
+    margin: 10px;
+    /* height: 30px; */
+    font-weight: bold;
+    padding: 5px 10px;
+    font-family: "IBM Plex Mono", monospace;
+}
+.boton:hover{
+    background-color: rgb(246, 152, 195);
+    color: black;
+}
+
+.contenedor {
+    margin-left: 37%;
+}

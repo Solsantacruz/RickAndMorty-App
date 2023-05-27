@@ -13,9 +13,12 @@ async function getCharById(req, res){
             id: response.id,
             name: response.name,
             image: response.image,
+            species: response.species,
             gender: response.gender,
             status: response.status,
+            origin: response.origin,
         }
+        console.log(character)
         res.status(200).json(character);
     } catch (error) {
         res.status(500).json({ message: error.message });
